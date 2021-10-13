@@ -1,6 +1,11 @@
 import math
 import random
 
+
+class Player:
+    battle_name = ""
+    final_score = 0
+
 def get_player_data():
     """
     Get player details
@@ -13,11 +18,12 @@ def get_player_data():
 
     while True:
         battle_name = input("Enter your battle name here:")
-        
-        if validate_battle_name(battle_name):
-            print(f"Welcome to the battle, {battle_name}")
-            break
+        player.battle_name = battle_name
 
+        if validate_battle_name(battle_name):
+            print(f"Welcome to the battle, {battle_name} \n")
+            break
+        
 def validate_battle_name(battle_name):
     """
     Raise an Error in case battle name has more than 20 characters, 
@@ -40,4 +46,5 @@ def validate_battle_name(battle_name):
 
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
+player = Player()
 get_player_data()
