@@ -5,15 +5,18 @@ def get_player_data():
     """
     Get player details
     """
+
     print("Please enter your battle name")
     print("Battle names can have a maximu of 20 characters,")
     print("and spaces must be separated by an underscore")
     print("(for example: ana_banana) \n")
 
-    battle_name = input("Enter your battle name here:")
-    validate_battle_name(battle_name)
-
-    #print(f"Welcome to the battle, {battle_name}")
+    while True:
+        battle_name = input("Enter your battle name here:")
+        
+        if validate_battle_name(battle_name):
+            print(f"Welcome to the battle, {battle_name}")
+            break
 
 def validate_battle_name(battle_name):
     """
@@ -31,6 +34,9 @@ def validate_battle_name(battle_name):
             )
     except ValueError as e:
         print(f"Error: {e}. Please try again")
+        return False
+    
+    return True
 
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
