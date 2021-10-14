@@ -31,11 +31,16 @@ def get_player_data():
     
     while True:
         players_weapon = input("My weapon will be:")
-        player. players_weapon = players_weapon
-
+        player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
-            print(f"You have choosen {players_weapon} \n")
+            print("You have choosen:") 
+            if player.players_weapon == "H":
+                print(h)
+            elif player.players_weapon == "C":
+                print(c)
+            else:
+                print(nb)
             break
 
 def validate_battle_name(battle_name):
@@ -80,7 +85,13 @@ def get_computers_weapon():
     weapons_choice = ['H', 'C', 'NB']
     computers_weapon = random.choice(weapons_choice)
     player.enemys_weapon = computers_weapon
-    print(f"Your enemy has chosen {computers_weapon}")
+    print(f"Your enemy has chosen:")
+    if player.enemys_weapon == "H":
+        print(h)
+    elif player.enemys_weapon == "C":
+        print(c)
+    else:
+        print(nb)
 
 def calculate_battle_results():
     if player.players_weapon == player.enemys_weapon:
@@ -97,6 +108,44 @@ def calculate_battle_results():
 
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
+c = """
+      ,--.     .--. 
+      /    \. ./    \ 
+     /  /\/  "  \/\  \ 
+    / _/ /~~~v~~~\ \_ \ 
+        /####|####\     
+     /\{#####|#####}/\   
+   _/  {#####|#####}  \_  
+  |   /{#####|#####}\   | 
+  |  / {#####|#####} \  | 
+  | /  {#####|#####}  \ | 
+  |  \ \#####|#####/ /  | 
+   \  \ \####|####/ /  / 
+    \     \##|##/     /  
+"""
+nb = """
+     _.-^^---....,,--       
+ _--                  --_  
+ \._                   _./  
+    ```--. . , ; .--'''       
+          | |   |             
+       .-=||  | |=-.   
+       `-=#$%&%$#=-'   
+          | ;  :|     
+ _____.,-#%&$@%#&#~,._____
+"""
+h = """
+      ////\\\\
+      |      |
+     @  O  O  @
+      |  ~   |         \__
+       \ -- /          |\ |
+     ___|  |___        | \|
+    /          \      /|__|
+   /            \    / /
+  /  /| .  . |\  \  / /
+ /  / |      | \  \/ /
+"""
 player = Player()
 get_player_data()
 get_computers_weapon()
