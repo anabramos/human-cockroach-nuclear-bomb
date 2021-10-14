@@ -12,8 +12,8 @@ def get_player_data():
     """
 
     print("Please enter your battle name")
-    print("Battle names can have a maximu of 20 characters,")
-    print("and spaces must be separated by an underscore")
+    print("Battle names can have a maximum of 20 characters,")
+    print("and spaces must be replaced by an underscore")
     print("(for example: ana_banana) \n")
 
     while True:
@@ -23,7 +23,7 @@ def get_player_data():
         if validate_battle_name(battle_name):
             print(f"Welcome to the battle, {battle_name} \n")
             break
-        
+
 def validate_battle_name(battle_name):
     """
     Raise an Error in case battle name has more than 20 characters, 
@@ -32,7 +32,7 @@ def validate_battle_name(battle_name):
     try:
         if len(battle_name) > 20:
             raise ValueError(
-                f"Battle names can mave a maximum of 20 characters. Yours has {len(battle_name)}"
+                f"Battle names can have a maximum of 20 characters. Yours has {len(battle_name)}"
             )
         elif ' ' in battle_name:
             raise ValueError(
@@ -44,7 +44,19 @@ def validate_battle_name(battle_name):
     
     return True
 
+def get_players_weapon():
+    """
+    Get player's weapon of choice
+    """
+
+    print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
+    print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
+
+    players_weapon = input("My weapon will be:")
+    print(f"You have choosen {players_weapon} \n")
+
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 player = Player()
 get_player_data()
+get_players_weapon()
