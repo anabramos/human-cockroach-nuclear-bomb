@@ -4,6 +4,8 @@ import random
 
 class Player:
     battle_name = ""
+    players_weapon = ""
+    enemys_weapon = ""
     final_score = 0
 
 def get_player_data():
@@ -29,6 +31,8 @@ def get_player_data():
     
     while True:
         players_weapon = input("My weapon will be:")
+        player. players_weapon = players_weapon
+
 
         if validate_players_weapon(players_weapon):
             print(f"You have choosen {players_weapon} \n")
@@ -73,11 +77,27 @@ def get_computers_weapon():
     """
     Get random weapons choice for the computer
     """
-    weapons_choice = ['paper', 'scissors', 'rock']
+    weapons_choice = ['H', 'C', 'NB']
     computers_weapon = random.choice(weapons_choice)
-    print(computers_weapon)
+    player.enemys_weapon = computers_weapon
+    print(f"Your enemy has chosen {computers_weapon}")
+
+def calculate_battle_results():
+    if player.players_weapon == player.enemys_weapon:
+        print("It's a tie!")
+    elif player.players_weapon == 'C' and player.enemys_weapon == 'NB':
+        print("You win!")
+    elif player.players_weapon == 'H' and player.enemys_weapon == 'C':
+        print("You win!")
+    elif player.players_weapon == 'NB' and player.enemys_weapon == 'H':
+        print("You win!")
+    else:
+        print("You loose!")
+
+
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 player = Player()
 get_player_data()
 get_computers_weapon()
+calculate_battle_results()
