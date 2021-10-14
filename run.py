@@ -152,8 +152,7 @@ def play_again():
         try:
             player_replay = input("Type 'Y' for yes, or 'N' for no.")
             if player_replay == "Y":
-                #run restrat game function
-                return "Y"
+                restart_game()
                 break
             elif player_replay == "N":
                 end_game()
@@ -167,9 +166,21 @@ def play_again():
             print(f"Error: {e}")
             continue
 
+
 def end_game():
     print(f"Thank you for playing {player.players_battle_name}.")
     print(f"You have battled {player.emenys_battle_name} and won a total of {player.player_score} times!")
+
+
+def restart_game():
+    get_player_weapon_choice()
+    get_enemy_weapon()
+    print_battle_outcome(player.players_battle_name, player.players_weapon)
+    print_battle_outcome(player.emenys_battle_name, player.enemys_weapon)
+    calculate_battle_results()
+    score_board()
+    play_again()
+
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 c = """
