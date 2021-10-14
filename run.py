@@ -8,6 +8,7 @@ class Player:
     enemys_weapon = ""
     final_score = 0
 
+
 def get_player_data():
     """
     Get player details: battle name and weapon choice
@@ -19,7 +20,7 @@ def get_player_data():
     print("(for example: ana_banana) \n")
 
     while True:
-        battle_name = input("Enter your battle name here:")
+        battle_name = input("Enter your battle name here:\n")
         player.battle_name = battle_name
 
         if validate_battle_name(battle_name):
@@ -30,7 +31,7 @@ def get_player_data():
     print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
     
     while True:
-        players_weapon = input("My weapon will be:")
+        players_weapon = input("My weapon will be:\n")
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
@@ -42,6 +43,7 @@ def get_player_data():
             else:
                 print(nb)
             break
+
 
 def validate_battle_name(battle_name):
     """
@@ -55,12 +57,13 @@ def validate_battle_name(battle_name):
             )
         elif ' ' in battle_name:
             raise ValueError(
-                f"You must use underscore to represent spaces"
+                "You must use underscore to represent spaces"
             )
     except ValueError as e:
         print(f"Error: {e}. Please try again")
         return False
     
+
     return True
 
 def validate_players_weapon(players_weapon):
