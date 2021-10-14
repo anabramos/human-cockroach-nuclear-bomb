@@ -51,10 +51,28 @@ def get_players_weapon():
 
     print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
     print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
+    
+    while True:
+        players_weapon = input("My weapon will be:")
 
-    players_weapon = input("My weapon will be:")
-    print(f"You have choosen {players_weapon} \n")
+        if validate_players_weapon(players_weapon):
+            print(f"You have choosen {players_weapon} \n")
+            break
 
+def validate_players_weapon(players_weapon):
+    """
+    Raise an Error in case user input does not match available weapons. 
+    """
+    try:
+        if players_weapon != "H" and players_weapon != "C" and players_weapon != "NB":
+            raise ValueError(
+                f"{players_weapon} is not a valid weapon"
+            )
+    except ValueError as e:
+        print(f"Error: {e}. Please try again")
+        return False
+    
+    return True
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 player = Player()
