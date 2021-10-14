@@ -3,8 +3,9 @@ import random
 
 
 class Player:
-    battle_name = ""
+    players_battle_name = ""
     players_weapon = ""
+    emenys_battle_name = ""
     enemys_weapon = ""
     final_score = 0
 
@@ -20,11 +21,11 @@ def get_player_data():
     print("(for example: ana_banana) \n")
 
     while True:
-        battle_name = input("Enter your battle name here:\n")
-        player.battle_name = battle_name
+        players_battle_name = input("Enter your battle name here:\n")
+        player.players_battle_name = players_battle_name
 
-        if validate_battle_name(battle_name):
-            print(f"Welcome to the battle, {battle_name} \n")
+        if validate_battle_name(players_battle_name):
+            print(f"Welcome to the battle, {players_battle_name} \n")
             break
 
     print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
@@ -35,22 +36,20 @@ def get_player_data():
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
-            print(f"You have choosen:{players_weapon}")
             break 
 
 
-
-def validate_battle_name(battle_name):
+def validate_battle_name(players_battle_name):
     """
     Raise an Error in case battle name has more than 20 characters, 
     and/or has a space character. 
     """
     try:
-        if len(battle_name) > 20:
+        if len(players_battle_name) > 20:
             raise ValueError(
                 f"Battle names can have a maximum of 20 characters. Yours has {len(battle_name)}"
             )
-        elif ' ' in battle_name:
+        elif ' ' in players_battle_name:
             raise ValueError(
                 "You must use underscore to represent spaces"
             )
@@ -82,14 +81,18 @@ def get_computers_weapon():
     """
     Get random weapons choice for the computer
     """
+    enemy_names_choice = ["Doctor Who" , "Robocop" , "Paranoid Android" , "Hardly Human" , "C3PO"]
+    enemys_name = random.choice(enemy_names_choice)
+    player.emenys_battle_name = enemys_name
+
     weapons_choice = ['H', 'C', 'NB']
     computers_weapon = random.choice(weapons_choice)
     player.enemys_weapon = computers_weapon
 
 
-def print_battle_outcome(weapon):
+def print_battle_outcome(name , weapon):
 
-    print(f"{player.battle_name} vs teddy_bear_AI")
+    print(f"{name} has selected:")
     if weapon == "H":
         print(h)
     elif weapon == "C":
@@ -147,6 +150,6 @@ h = """
 player = Player()
 get_player_data()
 get_computers_weapon()
-print_battle_outcome(player.players_weapon)
-print_battle_outcome(player.enemys_weapon)
+print_battle_outcome(player.players_battle_name , player.players_weapon) 
+print_battle_outcome(player.emenys_battle_name , player.enemys_weapon)
 calculate_battle_results()
