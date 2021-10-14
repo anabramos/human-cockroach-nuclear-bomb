@@ -156,7 +156,7 @@ def play_again():
                 return "Y"
                 break
             elif player_replay == "N":
-                #run end game function
+                end_game()
                 return "N"
                 break
             else:
@@ -167,7 +167,9 @@ def play_again():
             print(f"Error: {e}")
             continue
 
-    print(player_replay)
+def end_game():
+    print(f"Thank you for playing {player.players_battle_name}.")
+    print(f"You have battled {player.emenys_battle_name} and won a total of {player.player_score} times!")
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 c = """
