@@ -107,21 +107,17 @@ def print_battle_outcome(name, weapon):
 
 
 def calculate_battle_results():
+
     if player.players_weapon == player.enemys_weapon:
-        print("It's a tie!")
         return "Tie"
     elif player.players_weapon == 'C' and player.enemys_weapon == 'NB':
-        print("You win!")
         return "Win"
     elif player.players_weapon == 'H' and player.enemys_weapon == 'C':
-        print("You win!")
         return "Win"
     elif player.players_weapon == 'NB' and player.enemys_weapon == 'H':
-        print("You win!")
         return "Win"
     else:
-        print("You loose!")
-        return "Loose"
+        return "Lose"
 
 
 def score_board():
@@ -129,11 +125,13 @@ def score_board():
     enemys_score = 0
 
     if calculate_battle_results() == "Win":
+        print("You win!")
         players_score += 1
     elif calculate_battle_results() == "Lose":
+        print("You lose!")
         enemys_score += 1
     else:
-        pass
+        print("It's a tie!")
 
     print("Score Board")
     print(f"{player.players_battle_name} - {players_score}")
