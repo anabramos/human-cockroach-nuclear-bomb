@@ -7,6 +7,8 @@ class Player:
     players_weapon = ""
     emenys_battle_name = ""
     enemys_weapon = ""
+    player_score = 0
+    enemy_score = 0
     final_score = 0
 
 
@@ -121,21 +123,19 @@ def calculate_battle_results():
 
 
 def score_board():
-    players_score = 0
-    enemys_score = 0
 
     if calculate_battle_results() == "Win":
         print("You win!")
-        players_score += 1
+        player.player_score += 1
     elif calculate_battle_results() == "Lose":
         print("You lose!")
-        enemys_score += 1
+        player.enemy_score += 1
     else:
         print("It's a tie!")
 
     print("Score Board")
-    print(f"{player.players_battle_name} - {players_score}")
-    print(f"{player.emenys_battle_name} - {enemys_score} ")
+    print(f"{player.players_battle_name} - {player.player_score}")
+    print(f"{player.emenys_battle_name} - {player.enemy_score} ")
 
 
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
