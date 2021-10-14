@@ -145,6 +145,30 @@ def score_board():
     print(f"{player.emenys_battle_name} - {player.enemy_score} ")
 
 
+def play_again():
+    print("Would you like to play another round?")
+
+    while True:
+        try:
+            player_replay = input("Type 'Y' for yes, or 'N' for no.")
+            if player_replay == "Y":
+                #run restrat game function
+                return "Y"
+                break
+            elif player_replay == "N":
+                #run end game function
+                return "N"
+                break
+            else:
+                raise ValueError(
+                "You must provide a valid character"
+            ) 
+        except ValueError as e:
+            print(f"Error: {e}")
+            continue
+
+    print(player_replay)
+
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 c = """
        ,--.     .--.
@@ -178,6 +202,7 @@ h = """
    /  Human    |
 """
 player = Player()
+
 get_player_battle_name()
 get_player_weapon_choice()
 get_enemy_battle_name()
@@ -186,3 +211,4 @@ print_battle_outcome(player.players_battle_name, player.players_weapon)
 print_battle_outcome(player.emenys_battle_name, player.enemys_weapon)
 calculate_battle_results()
 score_board()
+play_again()
