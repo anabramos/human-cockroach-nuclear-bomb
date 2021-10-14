@@ -130,7 +130,7 @@ def score_board():
 
     if calculate_battle_results() == "Win":
         players_score += 1
-    elif calculate_battle_results() == "Loose":
+    elif calculate_battle_results() == "Lose":
         enemys_score += 1
     else:
         pass
@@ -144,23 +144,23 @@ print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 c = """
        ,--.     .--.
            \. ./
-        /\/  "  \/|
-        /####|####\   
+        /\/  "  \/\/\.
+        /####|####\.
      /\{#####|#####}/|
    _/  {#Cockroach#} |
        /\####|####/|
-       / {###|###} |
+      /  {###|###} |
        \  {##|##}  /
 """
 nb = """
-       _.-^-....,,--      
-   .-/    Nuclear    \_  
-   ._      Bomb      /  
-    ```--. . , ; .--''      
-          |     |             
-       .-=|     |=-.   
-       `-=#$%&%$#=-'   
-          | ;  :|     
+       _.-^-....,,--.
+   .-/    Nuclear    \.
+   ._      Bomb      /
+    ```--. . , ; .--''
+          |     |
+       .-=|     |=-.
+       `-=#$%&%$#=-'
+          | ;  :|
  _____.,-#%&$@%#&#~,._____
 """
 h = """
@@ -170,12 +170,12 @@ h = """
       |  ^   |
        \ -- /
      ___|  |___
-   /  Human    \ 
+   /  Human    |
 """
 player = Player()
 get_player_data()
 get_computers_weapon()
-print_battle_outcome(player.players_battle_name, player.players_weapon) 
+print_battle_outcome(player.players_battle_name, player.players_weapon)
 print_battle_outcome(player.emenys_battle_name, player.enemys_weapon)
 calculate_battle_results()
 score_board()
