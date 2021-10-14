@@ -8,7 +8,7 @@ class Player:
 
 def get_player_data():
     """
-    Get player details
+    Get player details: battle name and weapon choice
     """
 
     print("Please enter your battle name")
@@ -22,6 +22,16 @@ def get_player_data():
 
         if validate_battle_name(battle_name):
             print(f"Welcome to the battle, {battle_name} \n")
+            break
+
+    print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
+    print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
+    
+    while True:
+        players_weapon = input("My weapon will be:")
+
+        if validate_players_weapon(players_weapon):
+            print(f"You have choosen {players_weapon} \n")
             break
 
 def validate_battle_name(battle_name):
@@ -43,21 +53,6 @@ def validate_battle_name(battle_name):
         return False
     
     return True
-
-def get_players_weapon():
-    """
-    Get player's weapon of choice
-    """
-
-    print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
-    print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
-    
-    while True:
-        players_weapon = input("My weapon will be:")
-
-        if validate_players_weapon(players_weapon):
-            print(f"You have choosen {players_weapon} \n")
-            break
 
 def validate_players_weapon(players_weapon):
     """
@@ -85,5 +80,4 @@ def get_computers_weapon():
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 player = Player()
 get_player_data()
-get_players_weapon()
 get_computers_weapon()
