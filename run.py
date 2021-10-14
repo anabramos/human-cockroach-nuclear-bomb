@@ -12,7 +12,7 @@ class Player:
     final_score = 0
 
 
-def get_player_data():
+def get_player_battle_name():
     """
     Get player details: battle name and weapon choice
     """
@@ -28,16 +28,6 @@ def get_player_data():
 
         if validate_battle_name(players_battle_name):
             print(f"Welcome to the battle, {players_battle_name} \n")
-            break
-
-    print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
-    print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
-
-    while True:
-        players_weapon = input("My weapon will be:\n")
-        player.players_weapon = players_weapon
-
-        if validate_players_weapon(players_weapon):
             break
 
 
@@ -62,6 +52,18 @@ def validate_battle_name(players_battle_name):
     return True
 
 
+def get_player_weapon_choice():
+    print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
+    print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
+
+    while True:
+        players_weapon = input("My weapon will be:\n")
+        player.players_weapon = players_weapon
+
+        if validate_players_weapon(players_weapon):
+            break
+
+    
 def validate_players_weapon(players_weapon):
     """
     Raise an Error in case user input does not match available weapons.
@@ -78,9 +80,9 @@ def validate_players_weapon(players_weapon):
     return True
 
 
-def get_computers_weapon():
+def get_enemy_battle_name():
     """
-    Get random weapons choice for the computer
+    Get random battle name for the computer
     """
     enemy_names_choice = [
         "Doctor Who",
@@ -92,6 +94,11 @@ def get_computers_weapon():
     enemys_name = random.choice(enemy_names_choice)
     player.emenys_battle_name = enemys_name
 
+
+def get_enemy_weapon():
+    """
+    Get random weapons choice for the computer
+    """
     weapons_choice = ['H', 'C', 'NB']
     computers_weapon = random.choice(weapons_choice)
     player.enemys_weapon = computers_weapon
@@ -142,7 +149,7 @@ print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 c = """
        ,--.     .--.
            \. ./
-        /\/  "  \/\/\.
+      /\/\/  "  \/\/\.
         /####|####\.
      /\{#####|#####}/|
    _/  {#Cockroach#} |
@@ -171,8 +178,10 @@ h = """
    /  Human    |
 """
 player = Player()
-get_player_data()
-get_computers_weapon()
+get_player_battle_name()
+get_player_weapon_choice()
+get_enemy_battle_name()
+get_enemy_weapon()
 print_battle_outcome(player.players_battle_name, player.players_weapon)
 print_battle_outcome(player.emenys_battle_name, player.enemys_weapon)
 calculate_battle_results()
