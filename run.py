@@ -35,14 +35,9 @@ def get_player_data():
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
-            print("You have choosen:") 
-            if player.players_weapon == "H":
-                print(h)
-            elif player.players_weapon == "C":
-                print(c)
-            else:
-                print(nb)
-            break
+            print(f"You have choosen:{players_weapon}")
+            break 
+
 
 
 def validate_battle_name(battle_name):
@@ -66,6 +61,7 @@ def validate_battle_name(battle_name):
 
     return True
 
+
 def validate_players_weapon(players_weapon):
     """
     Raise an Error in case user input does not match available weapons. 
@@ -81,6 +77,7 @@ def validate_players_weapon(players_weapon):
     
     return True
 
+
 def get_computers_weapon():
     """
     Get random weapons choice for the computer
@@ -88,13 +85,18 @@ def get_computers_weapon():
     weapons_choice = ['H', 'C', 'NB']
     computers_weapon = random.choice(weapons_choice)
     player.enemys_weapon = computers_weapon
-    print(f"Your enemy has chosen:")
-    if player.enemys_weapon == "H":
+
+
+def print_battle_outcome(weapon):
+
+    print(f"{player.battle_name} vs teddy_bear_AI")
+    if weapon == "H":
         print(h)
-    elif player.enemys_weapon == "C":
+    elif weapon == "C":
         print(c)
     else:
         print(nb)
+    
 
 def calculate_battle_results():
     if player.players_weapon == player.enemys_weapon:
@@ -134,10 +136,10 @@ nb = """
  _____.,-#%&$@%#&#~,._____
 """
 h = """
-      ////\\\\
+      ////////
       |      |
-     @  O  O  @
-      |  ~   |
+     {  o  o  }
+      |  ^   |
        \ -- /
      ___|  |___
    /            \ 
@@ -145,4 +147,6 @@ h = """
 player = Player()
 get_player_data()
 get_computers_weapon()
+print_battle_outcome(player.players_weapon)
+print_battle_outcome(player.enemys_weapon)
 calculate_battle_results()
