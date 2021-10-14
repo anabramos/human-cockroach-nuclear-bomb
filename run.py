@@ -188,7 +188,12 @@ def restart_game():
     play_again()
 
 
-print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
+color_main = fg('#FFEB00')
+res = attr("reset")
+
+print("#################################################################")
+print("--------- " + color_main + "Welcome to Human, Cockroach and Nuclear Bomb!" + res + " ---------")
+print("#################################################################")
 c = """
        ,--.     .--.
            \. ./
