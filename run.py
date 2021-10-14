@@ -74,7 +74,16 @@ def validate_players_weapon(players_weapon):
     
     return True
 
+def get_computers_weapon():
+    """
+    Get random weapons choice for the computer
+    """
+    weapons_choice = ['paper', 'scissors', 'rock']
+    computers_weapon = random.choice(weapons_choice)
+    print(computers_weapon)
+
 print("Welcome to Human, Cockroach and Nuclear Bomb! \n")
 player = Player()
 get_player_data()
 get_players_weapon()
+get_computers_weapon()
