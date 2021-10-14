@@ -1,5 +1,6 @@
 import math
 import random
+from colored import fg, bg, attr
 
 
 class Player:
@@ -63,7 +64,7 @@ def get_player_weapon_choice():
         if validate_players_weapon(players_weapon):
             break
 
-    
+
 def validate_players_weapon(players_weapon):
     """
     Raise an Error in case user input does not match available weapons.
@@ -106,13 +107,18 @@ def get_enemy_weapon():
 
 def print_battle_outcome(name, weapon):
 
+    color_nb = fg('#FF0000')
+    color_c = fg('#FFA600')
+    color_h = fg ('#00CFFF')
+    res = attr("reset")
+
     print(f"{name} has selected:")
     if weapon == "H":
-        print(h)
+        print(color_h + h + res)
     elif weapon == "C":
-        print(c)
+        print(color_c + c + res)
     else:
-        print(nb)
+        print(color_nb + nb + res)
 
 
 def calculate_battle_results():
