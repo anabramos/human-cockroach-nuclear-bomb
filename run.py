@@ -39,7 +39,6 @@ def get_player_battle_name():
         print(hash_line)
 
         if validate_battle_name(players_battle_name):
-            os.system('cls' if os.name == 'nt' else 'clear')
             print(color_blue + f"Welcome to the battle, {players_battle_name} \n" + res)
             print(hash_line)
             break
@@ -76,7 +75,6 @@ def get_player_weapon_choice():
 
     while True:
         players_weapon = input(color_yellow + "My weapon will be:\n" + res)
-        print(hash_line)
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
@@ -171,10 +169,9 @@ def score_board():
     else:
         print(color_yellow + "It's a tie!" + res)
 
-    print(hash_line)
-    print("Score Board")
-    print(f"{player.players_battle_name} - {player.player_score}")
-    print(f"{player.emenys_battle_name} - {player.enemy_score} ")
+    print("Score:")
+
+    print(f"{player.players_battle_name} {player.player_score} x {player.enemy_score} {player.emenys_battle_name}")
     print(hash_line)
 
 
@@ -188,7 +185,7 @@ def play_again():
 
     while True:
         try:
-            player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no." + res)
+            player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no. \n" + res)
             if player_replay == "Y":
                 restart_game()
                 break
