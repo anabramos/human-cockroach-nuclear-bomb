@@ -18,7 +18,7 @@ def game_intro():
     Print game title, instructions and rules at the begiining of every game.
     """
     print(hash_line)
-    print("--------- " + color_main + "Welcome to Human, Cockroach and Nuclear Bomb!" + res + " ---------")
+    print("--------- " + color_blue + "Welcome to Human, Cockroach and Nuclear Bomb!" + res + " ---------")
     print(hash_line)
     print(text_box_rules)
 
@@ -33,12 +33,13 @@ def get_player_battle_name():
     print("- For example: ana_banana")
 
     while True:
-        players_battle_name = input( color_main + "Enter your battle name here:\n" + res)
+        players_battle_name = input(color_yellow + "Enter your battle name here:\n" + res)
         player.players_battle_name = players_battle_name
         print(hash_line)
 
         if validate_battle_name(players_battle_name):
-            print(f"Welcome to the battle, {players_battle_name} \n")
+            print(color_blue + f"Welcome to the battle, {players_battle_name} \n" + res)
+            print(hash_line)
             break
 
 
@@ -68,11 +69,12 @@ def get_player_weapon_choice():
     Get player weapon choice.
     """
 
-    print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
-    print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
+    print("Choose your weapon:")
+    print(" - Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
 
     while True:
-        players_weapon = input("My weapon will be:\n")
+        players_weapon = input(color_yellow + "My weapon will be:\n" + res)
+        print(hash_line)
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
@@ -124,18 +126,13 @@ def print_battle_outcome(name, weapon):
     Print weapon choice of player and enemy(computer).
     """
 
-    color_nb = fg('#FF0000')
-    color_c = fg('#FFA600')
-    color_h = fg ('#00CFFF')
-    res = attr("reset")
-
     print(f"{name} has selected:")
     if weapon == "H":
-        print(color_h + h + res)
+        print(color_lightblue + h + res)
     elif weapon == "C":
-        print(color_c + c + res)
+        print(color_orange + c + res)
     else:
-        print(color_nb + nb + res)
+        print(color_red + nb + res)
 
 
 def calculate_battle_results():
@@ -161,19 +158,22 @@ def score_board():
     add up score for every win (player) and lost (enemy), 
     and add nothing when it is a tie.
     """
+    print(hash_line)
 
     if calculate_battle_results() == "Win":
-        print("You win!")
+        print(color_green + "You win!" + res)
         player.player_score += 1
     elif calculate_battle_results() == "Lose":
-        print("You lose!")
+        print(color_red + "You lose!" + res)
         player.enemy_score += 1
     else:
-        print("It's a tie!")
+        print(color_yellow + "It's a tie!" + res)
 
+    print(hash_line)
     print("Score Board")
     print(f"{player.players_battle_name} - {player.player_score}")
     print(f"{player.emenys_battle_name} - {player.enemy_score} ")
+    print(hash_line)
 
 
 def play_again():
@@ -186,7 +186,7 @@ def play_again():
 
     while True:
         try:
-            player_replay = input("Type 'Y' for yes, or 'N' for no.")
+            player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no." + res)
             if player_replay == "Y":
                 restart_game()
                 break
@@ -208,8 +208,11 @@ def end_game():
     Stop running the game, and print game overview to the player,
     including name of enemy and number of wins. 
     """
-    print(f"Thank you for playing {player.players_battle_name}.")
-    print(f"You have battled {player.emenys_battle_name} and won a total of {player.player_score} times!")
+    print(under_line)
+    
+    print(color_lightblue + f"Thank you for playing {player.players_battle_name}.")
+    print(f"You have battled {player.emenys_battle_name} and won a total of {player.player_score} times!" + res)
+
 
 
 def restart_game():
@@ -242,13 +245,18 @@ def main():
 
 
 # color schemes 
-color_main = fg('#FFEB00')
-color_blue_box = fg('#0035FF')
+color_yellow = fg('#FFEB00')
+color_blue = fg('#0035FF')
+color_red = fg('#FF0000')
+color_orange = fg('#FFA600')
+color_green = fg('#00FF1A')
+color_lightblue = fg ('#00CFFF')
 res = attr("reset")
 
 
 # styling packages
 hash_line = "#################################################################"
+under_line = "________________________________________________________________"
 text_box_rules = """
 _________________________________________________________________
 |The ultimate alternative to the usual rock, paper and scissors.|
