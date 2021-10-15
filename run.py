@@ -195,12 +195,10 @@ def play_again():
                 restart_game()
                 break
             elif player_replay == "N":
-                os.system('cls' if os.name == 'nt' else 'clear')
                 end_game()
                 return "N"
                 break
             else:
-                os.system('cls' if os.name == 'nt' else 'clear')
                 raise ValueError(
                     "You must provide a valid character"
                 ) 
