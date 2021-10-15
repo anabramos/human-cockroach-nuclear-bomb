@@ -36,10 +36,11 @@ def get_player_battle_name():
     while True:
         players_battle_name = input(color_yellow + "Enter your battle name here:\n" + res)
         player.players_battle_name = players_battle_name
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(hash_line)
 
         if validate_battle_name(players_battle_name):
-            print(color_blue + f"Welcome to the battle, {players_battle_name} \n" + res)
+            print(color_blue + f"Welcome to the battle, {players_battle_name}" + res)
             print(hash_line)
             break
 
@@ -75,6 +76,7 @@ def get_player_weapon_choice():
 
     while True:
         players_weapon = input(color_yellow + "My weapon will be:\n" + res)
+        os.system('cls' if os.name == 'nt' else 'clear')
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
@@ -186,6 +188,7 @@ def play_again():
     while True:
         try:
             player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no. \n" + res)
+            os.system('cls' if os.name == 'nt' else 'clear')
             if player_replay == "Y":
                 restart_game()
                 break
@@ -207,7 +210,6 @@ def end_game():
     Stop running the game, and print game overview to the player,
     including name of enemy and number of wins. 
     """
-    print(under_line)
     
     print(color_lightblue + f"Thank you for playing {player.players_battle_name}.")
     print(f"You have battled {player.enemys_battle_name} and won a total of {player.player_score} times!" + res)
