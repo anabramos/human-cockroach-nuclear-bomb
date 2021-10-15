@@ -160,7 +160,6 @@ def score_board():
     add up score for every win (player) and lost (enemy), 
     and add nothing when it is a tie.
     """
-    print(hash_line)
 
     if calculate_battle_results() == "Win":
         print(color_green + "You win!" + res)
@@ -267,8 +266,7 @@ _________________________________________________________________
 
 
 # weapons print art
-C = """
-     ,--.     .--,
+C = """     ,--.     .--,
          /.".\.
     /\  /##|##\. /\.
    /  \{###|###}/  \.
@@ -276,8 +274,7 @@ C = """
     /  {###|###}  \.
     \   {##|##}   /
 """
-NB = """
-   _.-^-....,,--.,
+NB = """   _.-^-....,,--.,
  -/  Nuclear Bomb \.
   ``--. . , ; .--''
     .-=|     |=-.
@@ -285,8 +282,7 @@ NB = """
        | ;  :|
  ___.,-#%&$@%#&#~,._____
 """
-H = """
-  ////////
+H = """  ////////
   |Human |
  {  o  o  }
   |  ^   |
