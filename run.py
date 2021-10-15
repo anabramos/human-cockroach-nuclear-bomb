@@ -198,10 +198,6 @@ def play_again():
                 raise ValueError(
                     "You must provide a valid character"
                 ) 
-            ) 
-                ) 
-            ) 
-                ) 
         except ValueError as e:
             print(f"Error: {e}")
             continue
