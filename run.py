@@ -1,5 +1,6 @@
 import random
-import os
+#import os
+import sys
 from colored import fg, attr
 
 
@@ -34,7 +35,8 @@ def get_player_battle_name():
     while True:
         players_battle_name = input(color_yellow + "Enter your battle name here:\n" + res)
         player.players_battle_name = players_battle_name
-        os.system('cls' if os.name == 'nt' else 'clear')
+        sys.stderr.write("\x1b[2J\x1b[H")
+        #os.system('cls' if os.name == 'nt' else 'clear')
         print(hash_line)
 
         if validate_battle_name(players_battle_name):
@@ -74,7 +76,8 @@ def get_player_weapon_choice():
 
     while True:
         players_weapon = input(color_yellow + "My weapon will be:\n" + res)
-        os.system('cls' if os.name == 'nt' else 'clear')
+        sys.stderr.write("\x1b[2J\x1b[H")
+        #os.system('cls' if os.name == 'nt' else 'clear')
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
@@ -186,7 +189,8 @@ def play_again():
     while True:
         try:
             player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no. \n" + res)
-            os.system('cls' if os.name == 'nt' else 'clear')
+            sys.stderr.write("\x1b[2J\x1b[H")
+            # os.system('cls' if os.name == 'nt' else 'clear')
             if player_replay == "Y":
                 restart_game()
                 break
