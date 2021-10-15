@@ -184,6 +184,7 @@ def play_again():
     If yes, run restart game function.
     If not, run end game function.
     """
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("Would you like to play another round?")
 
     while True:
@@ -191,7 +192,6 @@ def play_again():
             player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no. \n" + res)
             #sys.stderr.write("\x1b[2J\x1b[H")
             if player_replay == "Y":
-                os.system('cls' if os.name == 'nt' else 'clear')
                 restart_game()
                 break
             elif player_replay == "N":
