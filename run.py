@@ -10,7 +10,6 @@ class Player:
     enemys_weapon = ""
     player_score = 0
     enemy_score = 0
-    final_score = 0
 
 
 def game_intro():
@@ -247,7 +246,7 @@ def main():
     play_again()
 
 
-# color schemes 
+# color schemes (from colored https://pypi.org/project/colored/)
 color_yellow = fg('#FFEB00')
 color_blue = fg('#0035FF')
 color_red = fg('#FF0000')
@@ -260,8 +259,7 @@ res = attr("reset")
 # styling packages
 hash_line = "#################################################################"
 under_line = "________________________________________________________________"
-text_box_rules = """
-_________________________________________________________________
+text_box_rules = """_________________________________________________________________
 |The ultimate alternative to the usual rock, paper and scissors.|
 |Rules of the game: Nuclear Bomb kills human. Human kills       |
 |cockroach. Cockroach survives the nuclear bomb.                |
@@ -294,6 +292,6 @@ H = """  ////////
  ___|  |___
 """
 
-#call functions to start game
+# call functions to start game
 player = Player()
 main()
