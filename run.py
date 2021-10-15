@@ -7,7 +7,7 @@ from colored import fg, bg, attr
 class Player:
     players_battle_name = ""
     players_weapon = ""
-    emenys_battle_name = ""
+    enemys_battle_name = ""
     enemys_weapon = ""
     player_score = 0
     enemy_score = 0
@@ -109,7 +109,7 @@ def get_enemy_battle_name():
         "C3PO"
     ]
     enemys_name = random.choice(enemy_names_choice)
-    player.emenys_battle_name = enemys_name
+    player.enemys_battle_name = enemys_name
 
 
 def get_enemy_weapon():
@@ -171,7 +171,7 @@ def score_board():
 
     print("Score:")
 
-    print(f"{player.players_battle_name} {player.player_score} x {player.enemy_score} {player.emenys_battle_name}")
+    print(f"{player.players_battle_name} {player.player_score} x {player.enemy_score} {player.enemys_battle_name}")
     print(hash_line)
 
 
@@ -210,7 +210,7 @@ def end_game():
     print(under_line)
     
     print(color_lightblue + f"Thank you for playing {player.players_battle_name}.")
-    print(f"You have battled {player.emenys_battle_name} and won a total of {player.player_score} times!" + res)
+    print(f"You have battled {player.enemys_battle_name} and won a total of {player.player_score} times!" + res)
 
 
 def restart_game():
@@ -220,7 +220,7 @@ def restart_game():
     get_player_weapon_choice()
     get_enemy_weapon()
     print_battle_outcome(player.players_battle_name, player.players_weapon)
-    print_battle_outcome(player.emenys_battle_name, player.enemys_weapon)
+    print_battle_outcome(player.enemys_battle_name, player.enemys_weapon)
     calculate_battle_results()
     score_board()
     play_again()
@@ -236,7 +236,7 @@ def main():
     get_enemy_battle_name()
     get_enemy_weapon()
     print_battle_outcome(player.players_battle_name, player.players_weapon)
-    print_battle_outcome(player.emenys_battle_name, player.enemys_weapon)
+    print_battle_outcome(player.enemys_battle_name, player.enemys_weapon)
     calculate_battle_results()
     score_board()
     play_again()
