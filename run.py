@@ -14,6 +14,9 @@ class Player:
 
 
 def game_intro():
+    """
+    Print game title, instructions and rules at the begiining of every game.
+    """
     print(hash_line)
     print("--------- " + color_main + "Welcome to Human, Cockroach and Nuclear Bomb!" + res + " ---------")
     print(hash_line)
@@ -22,7 +25,7 @@ def game_intro():
 
 def get_player_battle_name():
     """
-    Get player details: battle name and weapon choice
+    Get player battle name.
     """
     print(hash_line)
     print("Please create your battle name")
@@ -61,6 +64,10 @@ def validate_battle_name(players_battle_name):
 
 
 def get_player_weapon_choice():
+    """
+    Get player weapon choice.
+    """
+
     print("Choose your weapon: Human, Cockroach or Nuclear Bomb")
     print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
 
@@ -74,7 +81,7 @@ def get_player_weapon_choice():
 
 def validate_players_weapon(players_weapon):
     """
-    Raise an Error in case user input does not match available weapons.
+    Raise an Error in case user input for weapon choice is not available.
     """
     try:
         if players_weapon != "H" and players_weapon != "C" and players_weapon != "NB":
@@ -90,7 +97,7 @@ def validate_players_weapon(players_weapon):
 
 def get_enemy_battle_name():
     """
-    Get random battle name for the computer
+    Get random battle name for the computer.
     """
     enemy_names_choice = [
         "Doctor Who",
@@ -105,7 +112,7 @@ def get_enemy_battle_name():
 
 def get_enemy_weapon():
     """
-    Get random weapons choice for the computer
+    Get random weapons choice for the computer.
     """
     weapons_choice = ['H', 'C', 'NB']
     computers_weapon = random.choice(weapons_choice)
@@ -113,6 +120,9 @@ def get_enemy_weapon():
 
 
 def print_battle_outcome(name, weapon):
+    """
+    Print weapon choice of player and enemy(computer).
+    """
 
     color_nb = fg('#FF0000')
     color_c = fg('#FFA600')
@@ -129,6 +139,9 @@ def print_battle_outcome(name, weapon):
 
 
 def calculate_battle_results():
+    """
+    Based on player and computer's weapon choice, define is player wins or loses. 
+    """
 
     if player.players_weapon == player.enemys_weapon:
         return "Tie"
@@ -143,6 +156,11 @@ def calculate_battle_results():
 
 
 def score_board():
+    """
+    Print the score of each player at the end of each battle,
+    add up score for every win (player) and lost (enemy), 
+    and add nothing when it is a tie.
+    """
 
     if calculate_battle_results() == "Win":
         print("You win!")
@@ -159,6 +177,11 @@ def score_board():
 
 
 def play_again():
+    """
+    Ask player if they would like to play another round. 
+    If yes, run restart game function.
+    If not, run end game function.
+    """
     print("Would you like to play another round?")
 
     while True:
@@ -181,11 +204,18 @@ def play_again():
 
 
 def end_game():
+    """
+    Stop running the game, and print game overview to the player,
+    including name of enemy and number of wins. 
+    """
     print(f"Thank you for playing {player.players_battle_name}.")
     print(f"You have battled {player.emenys_battle_name} and won a total of {player.player_score} times!")
 
 
 def restart_game():
+    """ 
+    Run extra game round including only relevant functions.
+    """
     get_player_weapon_choice()
     get_enemy_weapon()
     print_battle_outcome(player.players_battle_name, player.players_weapon)
@@ -196,6 +226,9 @@ def restart_game():
 
 
 def main():
+    """
+    Runs the first round of the game
+    """
     game_intro()
     get_player_battle_name()
     get_player_weapon_choice()
@@ -258,6 +291,6 @@ h = """
    /  Human    |
 """
 
-
+#call functions to start game
 player = Player()
 main()
