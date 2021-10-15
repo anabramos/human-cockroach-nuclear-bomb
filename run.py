@@ -191,13 +191,16 @@ def play_again():
             player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no. \n" + res)
             #sys.stderr.write("\x1b[2J\x1b[H")
             if player_replay == "Y":
+                os.system('cls' if os.name == 'nt' else 'clear')
                 restart_game()
                 break
             elif player_replay == "N":
+                os.system('cls' if os.name == 'nt' else 'clear')
                 end_game()
                 return "N"
                 break
             else:
+                os.system('cls' if os.name == 'nt' else 'clear')
                 raise ValueError(
                     "You must provide a valid character"
                 ) 
@@ -205,7 +208,6 @@ def play_again():
             print(f"Error: {e}")
             continue
                 
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 
