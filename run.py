@@ -130,11 +130,11 @@ def print_battle_outcome(name, weapon):
 
     print(f"{name} has selected:")
     if weapon == "H":
-        print(color_lightblue + h + res)
+        print(color_lightblue + H + res)
     elif weapon == "C":
-        print(color_orange + c + res)
+        print(color_orange + C + res)
     else:
-        print(color_red + nb + res)
+        print(color_red + NB + res)
 
 
 def calculate_battle_results():
@@ -216,7 +216,6 @@ def end_game():
     print(f"You have battled {player.emenys_battle_name} and won a total of {player.player_score} times!" + res)
 
 
-
 def restart_game():
     """ 
     Run extra game round including only relevant functions.
@@ -269,7 +268,7 @@ _________________________________________________________________
 
 
 # weapons print art
-c = """
+C = """
      ,--.     .--,
          \. ./
         /  "  \.
@@ -280,7 +279,7 @@ c = """
     /  {###|###}  \.
     \   {##|##}   /
 """
-nb = """
+NB = """
    _.-^-....,,--.,
  -/  Nuclear Bomb \.
   ``--. . , ; .--''
@@ -289,7 +288,7 @@ nb = """
        | ;  :|
  ___.,-#%&$@%#&#~,._____
 """
-h = """
+H = """
   ////////
   |Human |
  {  o  o  }
