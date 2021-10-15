@@ -1,7 +1,6 @@
-import math
 import random
 import os
-from colored import fg, bg, attr
+from colored import fg, attr
 
 
 class Player:
@@ -94,6 +93,7 @@ def validate_players_weapon(players_weapon):
             )
     except ValueError as e:
         print(f"Error: {e}. Please try again")
+        print("Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
         return False
 
     return True
@@ -197,8 +197,12 @@ def play_again():
                 break
             else:
                 raise ValueError(
-                "You must provide a valid character"
+                    "You must provide a valid character"
+                ) 
             ) 
+                ) 
+            ) 
+                ) 
         except ValueError as e:
             print(f"Error: {e}")
             continue
