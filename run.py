@@ -220,7 +220,7 @@ def restart_game():
     """ 
     Run extra game round including only relevant functions.
     """
-    os.system('cls' if os.name == 'nt' else 'clear')
+    #os.system('cls' if os.name == 'nt' else 'clear')
     get_player_weapon_choice()
     get_enemy_weapon()
     print_battle_outcome(player.players_battle_name, player.players_weapon)
