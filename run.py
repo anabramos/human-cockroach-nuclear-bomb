@@ -1,5 +1,6 @@
 import math
 import random
+import os
 from colored import fg, bg, attr
 
 
@@ -38,6 +39,7 @@ def get_player_battle_name():
         print(hash_line)
 
         if validate_battle_name(players_battle_name):
+            os.system('cls' if os.name == 'nt' else 'clear')
             print(color_blue + f"Welcome to the battle, {players_battle_name} \n" + res)
             print(hash_line)
             break
@@ -268,35 +270,32 @@ _________________________________________________________________
 
 # weapons print art
 c = """
-       ,--.     .--.
-           \. ./
-      /\/\/  "  \/\/\.
-        /####|####\.
-     /\{#####|#####}/|
-   _/  {#Cockroach#} |
-       /\####|####/|
-      /  {###|###} |
-       \  {##|##}  /
+     ,--.     .--,
+         \. ./
+        /  "  \.
+       /###|###\.
+    /\{####|####}/\.
+ _/  {#Cockroach#}  \_
+     /\####|####/\.
+    /  {###|###}  \.
+    \   {##|##}   /
 """
 nb = """
-       _.-^-....,,--.
-   .-/    Nuclear    \.
-   ._      Bomb      /
-    ```--. . , ; .--''
-          |     |
-       .-=|     |=-.
-       `-=#$%&%$#=-'
-          | ;  :|
- _____.,-#%&$@%#&#~,._____
+   _.-^-....,,--.,
+ -/  Nuclear Bomb \.
+  ``--. . , ; .--''
+    .-=|     |=-.
+    `-=#$%&%$#=-'
+       | ;  :|
+ ___.,-#%&$@%#&#~,._____
 """
 h = """
-      ////////
-      |      |
-     {  o  o  }
-      |  ^   |
-       \ -- /
-     ___|  |___
-   /  Human    |
+  ////////
+  |Human |
+ {  o  o  }
+  |  ^   |
+   \ -- /
+ ___|  |___
 """
 
 #call functions to start game
