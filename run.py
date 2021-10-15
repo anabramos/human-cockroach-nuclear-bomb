@@ -17,15 +17,15 @@ def get_player_battle_name():
     """
     Get player details: battle name and weapon choice
     """
-
-    print("Please enter your battle name")
-    print("Battle names can have a maximum of 20 characters,")
-    print("and spaces must be replaced by an underscore")
-    print("(for example: ana_banana) \n")
+    print("#################################################################")
+    print("Please create your battle name")
+    print("- Use a max. of 20 characters, and underscores to replace spaces")
+    print("- For example: ana_banana")
 
     while True:
-        players_battle_name = input("Enter your battle name here:\n")
+        players_battle_name = input( color_main + "Enter your battle name here:\n" + res)
         player.players_battle_name = players_battle_name
+        print("#################################################################")
 
         if validate_battle_name(players_battle_name):
             print(f"Welcome to the battle, {players_battle_name} \n")
@@ -189,11 +189,20 @@ def restart_game():
 
 
 color_main = fg('#FFEB00')
+color_blue_box = fg('#0035FF')
 res = attr("reset")
 
 print("#################################################################")
 print("--------- " + color_main + "Welcome to Human, Cockroach and Nuclear Bomb!" + res + " ---------")
 print("#################################################################")
+print(color_blue_box + "_________________________________________________________________")
+print("|The ultimate alternative to the usual rock, paper and scissors |")
+print("|Rules: Nuclear Bomb kills human, who kills cockroach,          |")
+print("|who survives a nuclear bomb.                                   |")
+print("|_______________________________________________________________|" + res)
+
+
+
 c = """
        ,--.     .--.
            \. ./
