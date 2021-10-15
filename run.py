@@ -13,11 +13,18 @@ class Player:
     final_score = 0
 
 
+def game_intro():
+    print(hash_line)
+    print("--------- " + color_main + "Welcome to Human, Cockroach and Nuclear Bomb!" + res + " ---------")
+    print(hash_line)
+    print(text_box_rules)
+
+
 def get_player_battle_name():
     """
     Get player details: battle name and weapon choice
     """
-    print("#################################################################")
+    print(hash_line)
     print("Please create your battle name")
     print("- Use a max. of 20 characters, and underscores to replace spaces")
     print("- For example: ana_banana")
@@ -25,7 +32,7 @@ def get_player_battle_name():
     while True:
         players_battle_name = input( color_main + "Enter your battle name here:\n" + res)
         player.players_battle_name = players_battle_name
-        print("#################################################################")
+        print(hash_line)
 
         if validate_battle_name(players_battle_name):
             print(f"Welcome to the battle, {players_battle_name} \n")
@@ -187,22 +194,24 @@ def restart_game():
     score_board()
     play_again()
 
-
+# color schemes 
 color_main = fg('#FFEB00')
 color_blue_box = fg('#0035FF')
 res = attr("reset")
 
-print("#################################################################")
-print("--------- " + color_main + "Welcome to Human, Cockroach and Nuclear Bomb!" + res + " ---------")
-print("#################################################################")
-print(color_blue_box + "_________________________________________________________________")
-print("|The ultimate alternative to the usual rock, paper and scissors |")
-print("|Rules: Nuclear Bomb kills human, who kills cockroach,          |")
-print("|who survives a nuclear bomb.                                   |")
-print("|_______________________________________________________________|" + res)
+
+# styling packages
+hash_line = "#################################################################"
+text_box_rules = """
+_________________________________________________________________
+|The ultimate alternative to the usual rock, paper and scissors.|
+|Rules of the game: Nuclear Bomb kills human. Human kills       |
+|cockroach. Cockroach survives the nuclear bomb.                |
+|_______________________________________________________________|
+"""
 
 
-
+# weapons print art
 c = """
        ,--.     .--.
            \. ./
@@ -234,8 +243,10 @@ h = """
      ___|  |___
    /  Human    |
 """
-player = Player()
 
+
+player = Player()
+game_intro()
 get_player_battle_name()
 get_player_weapon_choice()
 get_enemy_battle_name()
