@@ -76,13 +76,13 @@ def get_player_weapon_choice():
 
     while True:
         players_weapon = input(color_yellow + "My weapon will be:\n" + res)
+        os.system('cls' if os.name == 'nt' else 'clear')
         #sys.stderr.write("\x1b[2J\x1b[H")
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
             break
     
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 def validate_players_weapon(players_weapon):
     """
