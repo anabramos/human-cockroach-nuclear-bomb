@@ -194,6 +194,20 @@ def restart_game():
     score_board()
     play_again()
 
+
+def main():
+    game_intro()
+    get_player_battle_name()
+    get_player_weapon_choice()
+    get_enemy_battle_name()
+    get_enemy_weapon()
+    print_battle_outcome(player.players_battle_name, player.players_weapon)
+    print_battle_outcome(player.emenys_battle_name, player.enemys_weapon)
+    calculate_battle_results()
+    score_board()
+    play_again()
+
+
 # color schemes 
 color_main = fg('#FFEB00')
 color_blue_box = fg('#0035FF')
@@ -246,13 +260,4 @@ h = """
 
 
 player = Player()
-game_intro()
-get_player_battle_name()
-get_player_weapon_choice()
-get_enemy_battle_name()
-get_enemy_weapon()
-print_battle_outcome(player.players_battle_name, player.players_weapon)
-print_battle_outcome(player.emenys_battle_name, player.enemys_weapon)
-calculate_battle_results()
-score_board()
-play_again()
+main()
