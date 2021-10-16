@@ -250,7 +250,7 @@ def main():
 
 # color schemes (from colored https://pypi.org/project/colored/)
 yellow = fg('#FFEB00')
-blue = fg('#0035FF')
+blue = fg('#7591FF')
 red = fg('#FF0000')
 orange = fg('#FFA600')
 green = fg('#00FF1A')

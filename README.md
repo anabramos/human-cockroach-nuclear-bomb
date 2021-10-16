@@ -78,3 +78,8 @@ While building the website some code was not behaving as expected. This happened
 - Python
     - No errors or warnings returned from the [PEP8 Online validator service](http://pep8online.com/)
 
+<a name="accessibility"></a>
+
+### Accessibility
+
+- The colors used in some parts of the code displayed in the terminal were tested for good contrast on [WebAIM](https://webaim.org/resources/contrastchecker/)
