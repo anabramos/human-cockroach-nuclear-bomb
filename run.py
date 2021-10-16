@@ -17,7 +17,7 @@ def game_intro():
     Print game title, instructions and rules at the begiining of every game.
     """
     print(hash_line)
-    print(stripes + color_blue + "Welcome to Cockroaches and Nuclear Bomb!" + res + stripes)
+    print(stripes + blue + "Welcome to Cockroaches and Nuclear Bomb!" + res + stripes)
     print(hash_line)
     print(text_box_rules)
 
@@ -32,13 +32,13 @@ def get_player_battle_name():
     print("- For example: ana_banana")
 
     while True:
-        player_battle_name = input(color_yellow + "Enter battle name:\n" + res)
+        player_battle_name = input(yellow + "Enter battle name:\n" + res)
         player.player_battle_name = player_battle_name
         os.system('cls' if os.name == 'nt' else 'clear')
         print(hash_line)
 
         if validate_battle_name(player_battle_name):
-            print(color_blue + f"Welcome {player_battle_name}" + res)
+            print(blue + f"Welcome {player_battle_name}" + res)
             print(hash_line)
             break
 
@@ -73,7 +73,7 @@ def get_player_weapon_choice():
     print(" - Type 'H' for Human, 'C' for Cockroach or 'NB' for Nuclear Bomb")
 
     while True:
-        players_weapon = input(color_yellow + "My weapon will be:\n" + res)
+        players_weapon = input(yellow + "My weapon will be:\n" + res)
         os.system('cls' if os.name == 'nt' else 'clear')
         player.players_weapon = players_weapon
 
@@ -131,11 +131,11 @@ def print_battle_outcome(name, weapon):
 
     print(f"{name} has selected:")
     if weapon == "H":
-        print(color_lightblue + H + res)
+        print(lightblue + H + res)
     elif weapon == "C":
-        print(color_orange + C + res)
+        print(orange + C + res)
     else:
-        print(color_red + NB + res)
+        print(red + NB + res)
 
 
 def calculate_battle_results():
@@ -164,17 +164,19 @@ def score_board():
     """
 
     if calculate_battle_results() == "Win":
-        print(color_green + "You win!" + res)
+        print(green + "You win!" + res)
         player.player_score += 1
     elif calculate_battle_results() == "Lose":
-        print(color_red + "You lose!" + res)
+        print(red + "You lose!" + res)
         player.enemy_score += 1
     else:
-        print(color_yellow + "It's a tie!" + res)
+        print(yellow + "It's a tie!" + res)
 
     print("Score:")
 
-    print(f"{player.player_battle_name} {player.player_score} x {player.enemy_score} {player.enemys_battle_name}")
+    print(f"{player.player_battle_name} - {player.player_score}")
+    print("X")
+    print(f"{player.enemy_score} - {player.enemys_battle_name}")
     print(hash_line)
 
 
@@ -188,11 +190,11 @@ def play_again():
 
     while True:
         try:
-            player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no. \n" + res)
-            if player_replay == "Y":
+            replay = input(yellow + "Type 'Y' for yes, 'N' for no. \n" + res)
+            if replay == "Y":
                 restart_game()
                 break
-            elif player_replay == "N":
+            elif replay == "N":
                 end_game()
                 return "N"
                 break
@@ -211,7 +213,7 @@ def end_game():
     including name of enemy and number of wins.
     """
 
-    print(color_red + f"Thanks for playing {player.player_battle_name}.")
+    print(red + f"Thanks for playing {player.player_battle_name}.")
     print(f"You have battled {player.enemys_battle_name},")
     print(f"and won a total of {player.player_score} times!" + res)
 
@@ -247,12 +249,12 @@ def main():
 
 
 # color schemes (from colored https://pypi.org/project/colored/)
-color_yellow = fg('#FFEB00')
-color_blue = fg('#0035FF')
-color_red = fg('#FF0000')
-color_orange = fg('#FFA600')
-color_green = fg('#00FF1A')
-color_lightblue = fg('#00CFFF')
+yellow = fg('#FFEB00')
+blue = fg('#0035FF')
+red = fg('#FF0000')
+orange = fg('#FFA600')
+green = fg('#00FF1A')
+lightblue = fg('#00CFFF')
 res = attr("reset")
 
 
