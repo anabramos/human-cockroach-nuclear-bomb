@@ -47,3 +47,17 @@ Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-b
 - Implement a best of 3 or best of 5 game format where a player/enemy can play several rounds until the first scores 3 or 5 points – then the game will reset. 
 
 - Display at the introduction to every new game (next to the instructions box) the battle name and score of the previous player.  
+
+<a name="testing"></a>
+
+## Testing
+
+<a name="component-level-testing"></a>
+
+### Component level Testing
+- The website was tested and it is working on different browsers: Google Chrome, Firefox, and Microsoft Edge.
+
+<a name="user-level-testing"></a>
+
+### User level Testing
+- Friends of mine tested the game for feedback. They reported that after a couple of rounds playing the game the terminal could get quite crowded and the text art to represent the different weapon objects were cut in half. To overcome this I have implemented a clear method to clear the terminal at every input stage of the user. 
