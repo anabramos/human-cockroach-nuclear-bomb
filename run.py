@@ -17,7 +17,7 @@ def game_intro():
     Print game title, instructions and rules at the begiining of every game.
     """
     print(hash_line)
-    print(stripes + blue + "Welcome to Cockroaches and Nuclear Bomb!" + res + stripes)
+    print(blue + game_title + res)
     print(hash_line)
     print(text_box_rules)
 
@@ -38,7 +38,7 @@ def get_player_battle_name():
         print(hash_line)
 
         if validate_battle_name(player_battle_name):
-            print(blue + f"Welcome {player_battle_name}" + res)
+            print(blue + welcome_message + player_battle_name + res)
             print(hash_line)
             break
 
@@ -261,7 +261,9 @@ res = attr("reset")
 # styling packages
 hash_line = "#################################################################"
 under_line = "________________________________________________________________"
-stripes = " ---------"
+stripes = " -----------"
+game_title = stripes + " Welcome to Cockroaches and Nuclear Bomb!" + stripes
+welcome_message = "Welcome to battle"
 text_box_rules = """_________________________________________________________________
 |The ultimate alternative to the usual rock, paper and scissors.|
 |Rules of the game: Nuclear Bomb kills human. Human kills       |
