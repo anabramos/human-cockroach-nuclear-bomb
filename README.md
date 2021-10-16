@@ -39,3 +39,11 @@ Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-b
     - An error will print in case the character types does not match the valid characters.
     - If the player types ‘Y’ the game will restart by only running the appropriate functions. This means the game will ask for the weapon choice of the play again and continue working with the same score, but will not ask for the player’s battle name again nor it will generate a new name for the enemy.
     - If the player types ‘N’ the game will end and print the overview of the battle(s) for the player. 
+
+<a name="features-to-be-implemented"></a>
+
+### Features to be implemented
+
+- Implement a best of 3 or best of 5 game format where a player/enemy can play several rounds until the first scores 3 or 5 points – then the game will reset. 
+
+- Display at the introduction to every new game (next to the instructions box) the battle name and score of the previous player.  
