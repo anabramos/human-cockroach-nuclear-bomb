@@ -61,3 +61,12 @@ Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-b
 
 ### User level Testing
 - Friends of mine tested the game for feedback. They reported that after a couple of rounds playing the game the terminal could get quite crowded and the text art to represent the different weapon objects were cut in half. To overcome this I have implemented a clear method to clear the terminal at every input stage of the user. 
+
+<a name="bugs"></a>
+
+### Bugs
+While building the website some code was not behaving as expected. This happened mostly because of the order of functions being called and order in which variables were defined. Some other bugs I encountered were:
+
+- I created the object player as part of the class Player. My idea was to first create the object and then slowly assign the values to it as the code/game runs. This was not possible because I was using the _init__ method. To make the adaptation I decided to use direct variables inside the class Player. 
+
+- After deployment there was a bug that would append parts of my code to the top of the terminal even though I was using a clear method to clear the entire terminal. This was quite a difficult one to fix because this bug was not happening on my gitpod terminal. After a couple of hours on tutoring session, specially trying to replace the os clear method into different code lines to see if it would have any effect, we realized the bug was actually from the heroku terminal itself. I have then adapted the amount of rows available in the terminal deployed version for the code to run without any issues. 
