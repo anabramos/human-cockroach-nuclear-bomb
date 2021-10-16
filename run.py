@@ -4,7 +4,7 @@ from colored import fg, attr
 
 
 class Player:
-    players_battle_name = ""
+    player_battle_name = ""
     players_weapon = ""
     enemys_battle_name = ""
     enemys_weapon = ""
@@ -17,7 +17,7 @@ def game_intro():
     Print game title, instructions and rules at the begiining of every game.
     """
     print(hash_line)
-    print("--------- " + color_blue + "Welcome to Human, Cockroach and Nuclear Bomb!" + res + " ---------")
+    print(stripes + color_blue + "Welcome to Cockroaches and Nuclear Bomb!" + res + stripes)
     print(hash_line)
     print(text_box_rules)
 
@@ -32,28 +32,28 @@ def get_player_battle_name():
     print("- For example: ana_banana")
 
     while True:
-        players_battle_name = input(color_yellow + "Enter your battle name here:\n" + res)
-        player.players_battle_name = players_battle_name
+        player_battle_name = input(color_yellow + "Enter battle name:\n" + res)
+        player.player_battle_name = player_battle_name
         os.system('cls' if os.name == 'nt' else 'clear')
         print(hash_line)
 
-        if validate_battle_name(players_battle_name):
-            print(color_blue + f"Welcome to the battle, {players_battle_name}" + res)
+        if validate_battle_name(player_battle_name):
+            print(color_blue + f"Welcome {player_battle_name}" + res)
             print(hash_line)
             break
 
 
-def validate_battle_name(players_battle_name):
+def validate_battle_name(player_battle_name):
     """
     Raise an Error in case battle name has more than 20 characters,
     and/or has a space character.
     """
     try:
-        if len(players_battle_name) > 20:
+        if len(player_battle_name) > 20:
             raise ValueError(
                 "Battle names can have a maximum of 20 characters."
             )
-        elif ' ' in players_battle_name:
+        elif ' ' in player_battle_name:
             raise ValueError(
                 "You must use underscore to represent spaces"
             )
@@ -86,7 +86,9 @@ def validate_players_weapon(players_weapon):
     Raise an Error in case user input for weapon choice is not available.
     """
     try:
-        if players_weapon != "H" and players_weapon != "C" and players_weapon != "NB":
+        if (players_weapon != "H" and
+                players_weapon != "C" and
+                players_weapon != "NB"):
             raise ValueError(
                 f"{players_weapon} is not a valid weapon"
             )
@@ -138,7 +140,8 @@ def print_battle_outcome(name, weapon):
 
 def calculate_battle_results():
     """
-    Based on player and computer's weapon choice, define is player wins or loses.
+    Based on player and computer's weapon choice,
+    define if player wins or loses.
     """
 
     if player.players_weapon == player.enemys_weapon:
@@ -171,7 +174,7 @@ def score_board():
 
     print("Score:")
 
-    print(f"{player.players_battle_name} {player.player_score} x {player.enemy_score} {player.enemys_battle_name}")
+    print(f"{player.player_battle_name} {player.player_score} x {player.enemy_score} {player.enemys_battle_name}")
     print(hash_line)
 
 
@@ -208,8 +211,9 @@ def end_game():
     including name of enemy and number of wins.
     """
 
-    print(color_lightblue + f"Thank you for playing {player.players_battle_name}.")
-    print(f"You have battled {player.enemys_battle_name} and won a total of {player.player_score} times!" + res)
+    print(color_red + f"Thanks for playing {player.player_battle_name}.")
+    print(f"You have battled {player.enemys_battle_name},")
+    print(f"and won a total of {player.player_score} times!" + res)
 
 
 def restart_game():
@@ -219,7 +223,7 @@ def restart_game():
     os.system('cls' if os.name == 'nt' else 'clear')
     get_player_weapon_choice()
     get_enemy_weapon()
-    print_battle_outcome(player.players_battle_name, player.players_weapon)
+    print_battle_outcome(player.player_battle_name, player.players_weapon)
     print_battle_outcome(player.enemys_battle_name, player.enemys_weapon)
     calculate_battle_results()
     score_board()
@@ -235,7 +239,7 @@ def main():
     get_player_weapon_choice()
     get_enemy_battle_name()
     get_enemy_weapon()
-    print_battle_outcome(player.players_battle_name, player.players_weapon)
+    print_battle_outcome(player.player_battle_name, player.players_weapon)
     print_battle_outcome(player.enemys_battle_name, player.enemys_weapon)
     calculate_battle_results()
     score_board()
@@ -255,6 +259,7 @@ res = attr("reset")
 # styling packages
 hash_line = "#################################################################"
 under_line = "________________________________________________________________"
+stripes = " ---------"
 text_box_rules = """_________________________________________________________________
 |The ultimate alternative to the usual rock, paper and scissors.|
 |Rules of the game: Nuclear Bomb kills human. Human kills       |
