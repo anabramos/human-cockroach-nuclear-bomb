@@ -1,6 +1,5 @@
 import random
 import os
-#import sys
 from colored import fg, attr
 
 
@@ -35,7 +34,6 @@ def get_player_battle_name():
     while True:
         players_battle_name = input(color_yellow + "Enter your battle name here:\n" + res)
         player.players_battle_name = players_battle_name
-        #sys.stderr.write("\x1b[2J\x1b[H")
         os.system('cls' if os.name == 'nt' else 'clear')
         print(hash_line)
 
@@ -77,12 +75,11 @@ def get_player_weapon_choice():
     while True:
         players_weapon = input(color_yellow + "My weapon will be:\n" + res)
         os.system('cls' if os.name == 'nt' else 'clear')
-        #sys.stderr.write("\x1b[2J\x1b[H")
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
             break
-    
+
 
 def validate_players_weapon(players_weapon):
     """
@@ -141,7 +138,7 @@ def print_battle_outcome(name, weapon):
 
 def calculate_battle_results():
     """
-    Based on player and computer's weapon choice, define is player wins or loses. 
+    Based on player and computer's weapon choice, define is player wins or loses.
     """
 
     if player.players_weapon == player.enemys_weapon:
@@ -159,7 +156,7 @@ def calculate_battle_results():
 def score_board():
     """
     Print the score of each player at the end of each battle,
-    add up score for every win (player) and lost (enemy), 
+    add up score for every win (player) and lost (enemy),
     and add nothing when it is a tie.
     """
 
@@ -180,7 +177,7 @@ def score_board():
 
 def play_again():
     """
-    Ask player if they would like to play another round. 
+    Ask player if they would like to play another round.
     If yes, run restart game function.
     If not, run end game function.
     """
@@ -189,7 +186,6 @@ def play_again():
     while True:
         try:
             player_replay = input(color_yellow + "Type 'Y' for yes, or 'N' for no. \n" + res)
-            #sys.stderr.write("\x1b[2J\x1b[H")
             if player_replay == "Y":
                 restart_game()
                 break
@@ -200,24 +196,24 @@ def play_again():
             else:
                 raise ValueError(
                     "You must provide a valid character"
-                ) 
+                )
         except ValueError as e:
             print(f"Error: {e}")
             continue
-                
+
 
 def end_game():
     """
     Stop running the game, and print game overview to the player,
-    including name of enemy and number of wins. 
+    including name of enemy and number of wins.
     """
-    
+
     print(color_lightblue + f"Thank you for playing {player.players_battle_name}.")
     print(f"You have battled {player.enemys_battle_name} and won a total of {player.player_score} times!" + res)
 
 
 def restart_game():
-    """ 
+    """
     Run extra game round including only relevant functions.
     """
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -252,7 +248,7 @@ color_blue = fg('#0035FF')
 color_red = fg('#FF0000')
 color_orange = fg('#FFA600')
 color_green = fg('#00FF1A')
-color_lightblue = fg ('#00CFFF')
+color_lightblue = fg('#00CFFF')
 res = attr("reset")
 
 
@@ -269,7 +265,7 @@ text_box_rules = """____________________________________________________________
 
 # weapons print art
 C = """     ,--.     .--,
-         /.".\.
+         /.".\,
     /\  /##|##\. /\.
    /  \{###|###}/  \.
  _/   {Cockroach}\. \_
