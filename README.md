@@ -93,14 +93,14 @@ The website was deployed using Heroku. For that, the following steps were taken:
 1. All user input fields on the python code received a new line (\n) at the end of their input request.
 2. Requirements were installed into the requirements.txt file using pip3 freeze > requirements.txt.
 3. On Heroku’s main page clicked on 'New' and then 'Create New App'.
-4. The project was given a unique name to match the GitHub repository and a region based on my location was selected. The project is then created by Heroku.
-5.  With the project created, navigate to settings and add a config var with KEY input field ‘PORT’ and ‘VALUE’ input field 8000.
-6. Scroll down right under the config var section and select to add a buildpack. A pop up window will open where I selected the Python icon, and then repeated the process to select the node.js buildpack. In this exact order so that the Python buildpack appears on top of the node.js buildpack.
-7. Return to the deploy tab within the page and choose GitHub as your deploy method. This will require you to give Heroku access to your GitHub account. 
-8. After connecting to GitHub, the name of the repository to be deployed is filled in and confirmed iby Heroku. 
+4. The project was given a unique name to match the GitHub repository and a region was selected based on my location. The project is then created by Heroku.
+5.  With the project created, navigate to settings and add a config var with KEY input field ‘PORT’ and VALUE input field '8000'.
+6. Scroll down right under the config var section and select to add a buildpack. A pop up window will open where the Python icon is selected, and then the process is repeated to select the node.js buildpack. In this exact order so that the Python buildpack appears on top of the node.js buildpack.
+7. Back at the the deploy tab GitHub was chosen as deploy method. This required me to give Heroku access to my GitHub account. 
+8. After connecting to GitHub, the name of the repository to be deployed is chosen and confirmed by Heroku. 
 9. The ‘Manual deploy’ method was selected as a way to keep track of changes and bugs that appear in the code. This allows you to also check the build of the app in an auto scroll window. 
-10. After the deployment is complete, Heroku will display the message “Your app was successfully deployed.” And will provide a link to your live website. 
-11. For any changes that happened in the code prior to the submission of this project, I updated the deployment manually using the main branch from GitHub.  
+10. After the deployment is complete, a message “Your app was successfully deployed.” is displayed. This will provide a button with a link to the live app. 
+11. For any changes that happened in the code prior to the submission of this project, the manual deployment is updated using the main branch from GitHub.  
 
 - Forking
     - To use this project as a reference or starting point, or even to propose changes to it, you can fork this repository by following these steps: 
