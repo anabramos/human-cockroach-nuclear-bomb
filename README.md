@@ -5,6 +5,21 @@ Nuclear Bomb cockroaches is a back end browser game developed in Python. The gam
 
 Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-bombs.herokuapp.com/)
 
+## Table of Contents
+- [Features](#features)
+    * [Features to be Implemented](#features-to-be-implemented)
+- [Testing](#testing)
+    * [Component level Testing](#component-level-testing)
+    * [User level Testing](#user-level-testing)
+    * [Bugs](#bugs)
+    * [Validator Testing](#validator-testing)
+    * [Accessibility](#accessibility)
+- [Deployment](#deployment)
+- [Design](#design)
+- [Technologies Used](#technologies-used)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
 
 
 <a name="features"></a>
@@ -160,4 +175,4 @@ The website was deployed using Heroku. For that, the following steps were taken:
 
 ## Acknowledgements
 
-A huge thanks to my mentor Samantha Dartnall, the CI slack community and tutoring team, the Proud Unicorns hackathon team, and my friends who tested the website at least 1000x. 
+A huge thanks to my mentor Samantha Dartnall, the CI slack community and tutoring team (specially Scott!), and my family and friends who tested the game at least a couple hundred times. 
