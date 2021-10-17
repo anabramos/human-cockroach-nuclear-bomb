@@ -38,7 +38,8 @@ def get_player_battle_name():
         print(hash_line)
 
         if validate_battle_name(player_battle_name):
-            print(blue + welcome_message + player_battle_name + res)
+            print(blue + welcome_message + player_battle_name)
+            print(f"You will be battling {player.enemys_battle_name}" + res)
             print(hash_line)
             break
 
@@ -105,10 +106,10 @@ def get_enemy_battle_name():
     Get random battle name for the computer.
     """
     enemy_names_choice = [
-        "Doctor Who",
+        "Doctor_Who",
         "Robocop",
-        "Paranoid Android",
-        "Hardly Human",
+        "Paranoid_Android",
+        "Hardly_Human",
         "C3PO"
     ]
     enemys_name = random.choice(enemy_names_choice)
@@ -238,9 +239,9 @@ def main():
     Runs the first round of the game
     """
     game_intro()
+    get_enemy_battle_name()
     get_player_battle_name()
     get_player_weapon_choice()
-    get_enemy_battle_name()
     get_enemy_weapon()
     print_battle_outcome(player.player_battle_name, player.players_weapon)
     print_battle_outcome(player.enemys_battle_name, player.enemys_weapon)
