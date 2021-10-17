@@ -34,10 +34,10 @@ def get_player_battle_name():
     while True:
         player_battle_name = input(yellow + "Enter battle name:\n" + res)
         player.player_battle_name = player_battle_name
-        print(hash_line)
 
         if validate_battle_name(player_battle_name):
             os.system('cls' if os.name == 'nt' else 'clear')
+            print(hash_line)
             print(blue + welcome_message + player_battle_name)
             print(f"You will be battling {player.enemys_battle_name}" + res)
             print(hash_line)
@@ -75,10 +75,10 @@ def get_player_weapon_choice():
 
     while True:
         players_weapon = input(yellow + "My weapon will be:\n" + res)
-        os.system('cls' if os.name == 'nt' else 'clear')
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
+            os.system('cls' if os.name == 'nt' else 'clear')
             break
 
 
