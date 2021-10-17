@@ -3,6 +3,8 @@
 ## About Cockroaches & Nuclear Bomb
 Nuclear Bomb cockroaches is a back end browser game developed in Python. The game came to revolutionize the way we play rock, paper and scissors. 
 
+The game is based on the classic game of rock paper and scissors. You can read more about it [here](https://en.wikipedia.org/wiki/Rock_paper_scissors). You will play against a computer - that is your enemy. You can play as many rounds as you want, but you can also quit at anytime. The game will calculate your score based on the results of the battle of each round you play. 
+
 Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-bombs.herokuapp.com/)
 
 ## Table of Contents
@@ -10,7 +12,7 @@ Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-b
     * [Features to be Implemented](#features-to-be-implemented)
 - [User Experience (UX)](#user-experience-ux)
 - [Data Model](#data-model)
-- [Flowchart Skeleton Plan](#flowchart)
+- [Flow chart Skeleton Plan](#flow-chart)
 - [Testing](#testing)
     * [Component level Testing](#component-level-testing)
     * [User level Testing](#user-level-testing)
@@ -144,11 +146,11 @@ The Player class has 6 attributes who are stored and changed in different ways t
 - player_score: it starts at 0 and will increase 1 point for every round the player wins from the enemy.
 - enemy_score: it starts at 0 and will increase 1 point for every round the player loses from the enemy.
 
-<a name="flowchart"></a>
+<a name="flow-chart"></a>
 
-## Flowchart Skeleton Plan
+## Flow chart Skeleton Plan
 
-The fowchart was created for better visualising the steps requiredto develop the game, and thinking along in terms of how to approach each step with a different python functionality. I created this flowchart detailing the key moments that woud be printed to the terminal and create the flow of the game to the user.
+The flow chart was created for better visualising the steps required to develop the game, and thinking along in terms of how to approach each step with a different python functionality. I created this flow chart detailing the key moments that woud be printed to the terminal and create the flow of the game to the user.
 
 <img src="assets/images/flowchart_skeleton.png" style="width: 40%" style="height: 100px">
 
