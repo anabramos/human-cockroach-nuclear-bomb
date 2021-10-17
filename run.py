@@ -4,6 +4,9 @@ from colored import fg, attr
 
 
 class Player:
+    """
+    A Player class
+    """
     player_battle_name = ""
     players_weapon = ""
     enemys_battle_name = ""
