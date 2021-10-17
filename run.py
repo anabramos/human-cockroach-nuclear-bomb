@@ -39,7 +39,9 @@ def get_player_battle_name():
         player.player_battle_name = player_battle_name
 
         if validate_battle_name(player_battle_name):
+            # functionality provided by CI slack community
             os.system('cls' if os.name == 'nt' else 'clear')
+
             print(HASH_LINE)
             print(blue + WELCOME_MESSAGE + player_battle_name)
             print(f"You will be battling {player.enemys_battle_name}" + res)
@@ -81,6 +83,7 @@ def get_player_weapon_choice():
         player.players_weapon = players_weapon
 
         if validate_players_weapon(players_weapon):
+            # functionality provided by CI slack community
             os.system('cls' if os.name == 'nt' else 'clear')
             break
 
@@ -217,6 +220,7 @@ def end_game():
     Stop running the game, and print game overview to the player,
     including name of enemy and number of wins.
     """
+    # functionality provided by CI slack community
     os.system('cls' if os.name == 'nt' else 'clear')
 
     print(red + f"Thanks for playing {player.player_battle_name}.")
@@ -228,7 +232,9 @@ def restart_game():
     """
     Run extra game round including only relevant functions.
     """
+    # functionality provided by CI slack community
     os.system('cls' if os.name == 'nt' else 'clear')
+
     get_player_weapon_choice()
     get_enemy_weapon()
     print_battle_outcome(player.player_battle_name, player.players_weapon)
