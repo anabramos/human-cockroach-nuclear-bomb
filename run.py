@@ -214,10 +214,11 @@ def end_game():
     Stop running the game, and print game overview to the player,
     including name of enemy and number of wins.
     """
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     print(red + f"Thanks for playing {player.player_battle_name}.")
     print(f"You have battled {player.enemys_battle_name},")
-    print(f"and won a total of {player.player_score} times!" + res)
+    print(f"and won a total of {player.player_score} time(s)!" + res)
 
 
 def restart_game():
