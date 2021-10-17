@@ -16,17 +16,17 @@ def game_intro():
     """
     Print game title, instructions and rules at the begiining of every game.
     """
-    print(hash_line)
-    print(blue + game_title + res)
-    print(hash_line)
-    print(text_box_rules)
+    print(HASH_LINE)
+    print(blue + GAME_TITLE + res)
+    print(HASH_LINE)
+    print(BOX_RULES)
 
 
 def get_player_battle_name():
     """
     Get player battle name.
     """
-    print(hash_line)
+    print(HASH_LINE)
     print("Please create your battle name")
     print("- Use a max. of 10 characters, and underscores to replace spaces")
     print("- For example: ana_banana")
@@ -37,10 +37,10 @@ def get_player_battle_name():
 
         if validate_battle_name(player_battle_name):
             os.system('cls' if os.name == 'nt' else 'clear')
-            print(hash_line)
-            print(blue + welcome_message + player_battle_name)
+            print(HASH_LINE)
+            print(blue + WELCOME_MESSAGE + player_battle_name)
             print(f"You will be battling {player.enemys_battle_name}" + res)
-            print(hash_line)
+            print(HASH_LINE)
             break
 
 
@@ -163,7 +163,7 @@ def score_board():
     add up score for every win (player) and lost (enemy),
     and add nothing when it is a tie.
     """
-    print(hash_line)
+    print(HASH_LINE)
 
     if calculate_battle_results() == "Win":
         print(green + "You win!" + res)
@@ -174,12 +174,12 @@ def score_board():
     else:
         print(yellow + "It's a tie!" + res)
 
-    print(hash_line)
+    print(HASH_LINE)
     print("Score:")
 
     print(f"{player.player_battle_name} - {player.player_score}")
     print(f"{player.enemys_battle_name} - {player.enemy_score}")
-    print(hash_line)
+    print(HASH_LINE)
 
 
 def play_again():
@@ -262,12 +262,12 @@ res = attr("reset")
 
 
 # styling packages
-hash_line = "#################################################################"
-under_line = "________________________________________________________________"
-stripes = " -----------"
-game_title = stripes + " Welcome to Cockroaches and Nuclear Bomb!" + stripes
-welcome_message = "Welcome to battle "
-text_box_rules = """_________________________________________________________________
+HASH_LINE = "#################################################################"
+UNDER_LINE = "________________________________________________________________"
+STRIPES = " -----------"
+GAME_TITLE = STRIPES + " Welcome to Cockroaches and Nuclear Bomb!" + STRIPES
+WELCOME_MESSAGE = "Welcome to battle "
+BOX_RULES = """_________________________________________________________________
 |The ultimate alternative to the usual rock, paper and scissors.|
 |Rules of the game: Nuclear Bomb kills human. Human kills       |
 |cockroach. Cockroach survives the nuclear bomb.                |
