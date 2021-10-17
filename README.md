@@ -8,6 +8,7 @@ Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-b
 ## Table of Contents
 - [Features](#features)
     * [Features to be Implemented](#features-to-be-implemented)
+- [User Experience (UX)](#user-experience-ux)
 - [Testing](#testing)
     * [Component level Testing](#component-level-testing)
     * [User level Testing](#user-level-testing)
@@ -62,6 +63,38 @@ Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-b
 - Implement a best of 3 or best of 5 game format where a player/enemy can play several rounds until the first scores 3 or 5 points – then the game will reset. 
 
 - Display at the introduction to every new game (next to the instructions box) the battle name and score of the previous player.  
+
+
+<a name="user-experience-ux"></a>
+
+## User Experience (UX)
+The user experience for the game is built with 2 personas in mind. Each persona presents a different user story and different goals when accessing the website. 
+
+- Personas 
+    - Persona 1: Code Institute project evaluators
+    - Persona 2: Rock, paper and scissors fanatic players 
+
+- About the game
+Have you ever thought to yourself “I wish there was a more fun way to play rock paper and scissors”. Or did you also never really understood why does a paper win from a rock anyways?  Well, then this game is for you! Cockroaches and Nuclear Bomb brings a fun new way of playing a classic game while using actual science to explain why certain ‘objects’ win from the others. Don’t stand there just waiting, and go play our game now!  
+
+- User stories
+
+    - A Code Institute project evaluator:
+        - I evaluate on a regular basis hundreds of rock, paper and scissors games.
+        - I know all the different ways in which someone can build a rock, paper and scissors game in Python.
+        - If I have to assess another rock paper and scissors game, I hope it has something new to it so I get some excitement from it.
+        - I want to be entertained and laugh a bit while assessing a new project.
+
+
+    - A Rock, paper and scissors fanatic player:
+        - I already know everything there is to know about rock, paper and scissors.
+        - I like the different variations of the rock, paper and scissors games, such as: rock, paper, scissors, lizard, spock (Big Bang Theory).
+        - I am always looking for a new way to play rock, paper and scissors.
+
+
+- Cockroaches and Nuclear Bomb goals with the game:
+    - The application provides a fun new way to play one of the most classic games worldwide. 
+
 
 <a name="testing"></a>
 
@@ -151,11 +184,8 @@ The website was deployed using Heroku. For that, the following steps were taken:
     - [Gitpod](https://www.gitpod.io/)
     - [Github](https://github.com/)
     - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)
-    - [Moqups](https://moqups.com/)
-    - [Coolors (color schemes generator)](https://coolors.co/)
-    - [Unsplash](https://unsplash.com/)
-    - [W3C HTML Validation Service](https://validator.w3.org/)
-    - [W3C CSS Validation Service](https://validator.w3.org/)
+    - [ASCIIART ART ARCHIEVE](https://www.asciiart.eu/)
+    - [PEP8 online python validator](http://pep8online.com/)
     - [Am I Responsive?](http://ami.responsivedesign.is/)
     - [WebAIM](https://webaim.org/resources/contrastchecker/)
 
