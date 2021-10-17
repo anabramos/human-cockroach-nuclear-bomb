@@ -101,3 +101,9 @@ The website was deployed using Heroku. For that, the following steps were taken:
 9. The ‘Manual deploy’ method was selected as a way to keep track of changes and bugs that appear in the code. This allows you to also check the build of the app in an auto scroll window. 
 10. After the deployment is complete, Heroku will display the message “Your app was successfully deployed.” And will provide a link to your live website. 
 11. For any changes that happened in the code prior to the submission of this project, I updated the deployment manually using the main branch from GitHub.  
+
+- Forking
+    - To use this project as a reference or starting point, or even to propose changes to it, you can fork this repository by following these steps: 
+        1. From the GitHub repository page click on 'Fork' in the top-right corner.
+        2. Create a new repository with a new name based on this project. 
+        3. Make sure to credit the project in case you decide to use any of the original code.
