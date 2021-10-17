@@ -10,6 +10,7 @@ Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-b
     * [Features to be Implemented](#features-to-be-implemented)
 - [User Experience (UX)](#user-experience-ux)
 - [Data Model](#data-model)
+- [Flowchart Skeleton Plan](#flowchart)
 - [Testing](#testing)
     * [Component level Testing](#component-level-testing)
     * [User level Testing](#user-level-testing)
@@ -143,6 +144,13 @@ The Player class has 6 attributes who are stored and changed in different ways t
 - player_score: it starts at 0 and will increase 1 point for every round the player wins from the enemy.
 - enemy_score: it starts at 0 and will increase 1 point for every round the player loses from the enemy.
 
+<a name="flowchart"></a>
+
+## Flowchart Skeleton Plan
+
+The fowchart was created for better visualising the steps requiredto develop the game, and thinking along in terms of how to approach each step with a different python functionality. I created this flowchart detailing the key moments that woud be printed to the terminal and create the flow of the game to the user.
+
+<img src="assets/images/flowchart_skeleton.png" style="width: 40%" style="height: 100px">
 
 <a name="testing"></a>
 
