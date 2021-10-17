@@ -117,3 +117,47 @@ The website was deployed using Heroku. For that, the following steps were taken:
 
 - Text Art
     - The text art used in this game to represent the Human, the Cockroach and the Nuclear Bomb were taken from [ASCIIART ART ARCHIEVE](https://www.asciiart.eu/) and adapted by myself to better suit the game purposes and sizes. 
+
+<a name="techlonogies-used"></a>
+
+## Technologies Used
+
+- Languages
+    - [Python](https://en.wikipedia.org/wiki/Python)
+
+- Libraries & Frameworks
+    - os: The os library was imported to utilize the os.system functionality to clear the terminal at any moment when there is a user input. This creates a less crowded terminal and more clean and clear for the game purposes. 
+
+    - random: The random library was imported to access values of a list by generating a random selection. This specifically concerns the selection of a battle name and a weapon for the computer/enemy.
+
+    - colored: The [colored library](https://pypi.org/project/colored/) was imported to add color and formatting in the terminal. 
+
+- Tools
+    - [Gitpod](https://www.gitpod.io/)
+    - [Github](https://github.com/)
+    - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)
+    - [Moqups](https://moqups.com/)
+    - [Coolors (color schemes generator)](https://coolors.co/)
+    - [Unsplash](https://unsplash.com/)
+    - [W3C HTML Validation Service](https://validator.w3.org/)
+    - [W3C CSS Validation Service](https://validator.w3.org/)
+    - [Am I Responsive?](http://ami.responsivedesign.is/)
+    - [WebAIM](https://webaim.org/resources/contrastchecker/)
+
+<a name="credits"></a>
+
+ ## Credits
+
+- Content
+ 
+    - All text art in this game wask taken from [ASCIIART ART ARCHIEVE](https://www.asciiart.eu/) and adapted by me into smaller scale.
+
+    - The os.system functionality to clear the terminal: os.system('cls' if os.name == 'nt' else 'clear') was an idea given to me by the CI Slack community, after we were discussing howI could improve readibility in the terminal after many game rounds. 
+    
+    - All other code was written by myself: Ana Ramos Barretto.
+
+<a name="acknowledgements"></a>
+
+## Acknowledgements
+
+A huge thanks to my mentor Samantha Dartnall, the CI slack community and tutoring team, the Proud Unicorns hackathon team, and my friends who tested the website at least 1000x. 
