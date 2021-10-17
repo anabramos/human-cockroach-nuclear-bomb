@@ -56,10 +56,10 @@ def validate_battle_name(player_battle_name):
             )
         elif ' ' in player_battle_name:
             raise ValueError(
-                "You must use underscore to represent spaces"
+                "You must use underscore to represent spaces."
             )
     except ValueError as e:
-        print(f"Error: {e}. Please try again")
+        print(f"Error: {e} Please try again")
         return False
 
     return True
