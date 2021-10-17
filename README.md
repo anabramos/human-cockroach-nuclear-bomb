@@ -7,6 +7,8 @@ The game is based on the classic game of rock paper and scissors. You can read m
 
 Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-bombs.herokuapp.com/)
 
+<img src="assets/images/am_i_responsive.png" style="width: 70%" style="height: 100px">
+
 ## Table of Contents
 - [Features](#features)
     * [Features to be Implemented](#features-to-be-implemented)
