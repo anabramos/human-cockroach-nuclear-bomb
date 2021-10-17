@@ -162,6 +162,7 @@ def score_board():
     add up score for every win (player) and lost (enemy),
     and add nothing when it is a tie.
     """
+    print(hash_line)
 
     if calculate_battle_results() == "Win":
         print(green + "You win!" + res)
@@ -172,11 +173,11 @@ def score_board():
     else:
         print(yellow + "It's a tie!" + res)
 
+    print(hash_line)
     print("Score:")
 
     print(f"{player.player_battle_name} - {player.player_score}")
-    print("X")
-    print(f"{player.enemy_score} - {player.enemys_battle_name}")
+    print(f"{player.enemys_battle_name} - {player.enemy_score}")
     print(hash_line)
 
 
@@ -263,7 +264,7 @@ hash_line = "#################################################################"
 under_line = "________________________________________________________________"
 stripes = " -----------"
 game_title = stripes + " Welcome to Cockroaches and Nuclear Bomb!" + stripes
-welcome_message = "Welcome to battle"
+welcome_message = "Welcome to battle "
 text_box_rules = """_________________________________________________________________
 |The ultimate alternative to the usual rock, paper and scissors.|
 |Rules of the game: Nuclear Bomb kills human. Human kills       |
