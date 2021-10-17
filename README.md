@@ -107,3 +107,13 @@ The website was deployed using Heroku. For that, the following steps were taken:
         1. From the GitHub repository page click on 'Fork' in the top-right corner.
         2. Create a new repository with a new name based on this project. 
         3. Make sure to credit the project in case you decide to use any of the original code.
+
+<a name="design"></a>
+
+## Design
+
+- Colors
+    - The game uses colors on the text to provide some contrast between the different information presented within the game. It makes therefore more clear to follow and easy to read without the feeling of being too much code or overwhelming. 
+
+- Text Art
+    - The text art used in this game to represent the Human, the Cockroach and the Nuclear Bomb were taken from [ASCIIART ART ARCHIEVE](https://www.asciiart.eu/) and adapted by myself to better suit the game purposes and sizes. 
