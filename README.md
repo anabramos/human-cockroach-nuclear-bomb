@@ -9,6 +9,7 @@ Link to live website: [Cockroaches & Nuclear Bomb](https://cockroaches-nuclear-b
 - [Features](#features)
     * [Features to be Implemented](#features-to-be-implemented)
 - [User Experience (UX)](#user-experience-ux)
+- [Data Model](#data-model)
 - [Testing](#testing)
     * [Component level Testing](#component-level-testing)
     * [User level Testing](#user-level-testing)
@@ -122,6 +123,25 @@ Have you ever thought to yourself “I wish there was a more fun way to play roc
 
 - Cockroaches and Nuclear Bomb goals with the game:
     - The application provides a fun new way to play one of the most classic games worldwide. 
+
+
+<a name="data-model"></a>
+
+## Data Model
+
+The game is made from a Player class. The object player is created at the very beggining of the game, and its instances and attributes are given values as the game runs.
+
+The Player class has 6 attributes who are stored and changed in different ways to be used throughout the code. 
+
+- player_battle_name: it is generated via user input at the beginning of every game and it stays the same for as many rounds as the player decides to play. 
+
+- enemys_battle_name: it is generated a random selection from within a list of oprtions at the beginning of every game and it stays the same for as many rounds as the player decides to play.
+
+- players_weapon: it is generated via user input and it changes at every new round the player decides to play.  
+- enemys_weapon: it is generated via a random selection and it changes at every new round the player decides to play.
+
+- player_score: it starts at 0 and will increase 1 point for every round the player wins from the enemy.
+- enemy_score: it starts at 0 and will increase 1 point for every round the player loses from the enemy.
 
 
 <a name="testing"></a>
