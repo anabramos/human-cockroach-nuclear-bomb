@@ -28,16 +28,16 @@ def get_player_battle_name():
     """
     print(hash_line)
     print("Please create your battle name")
-    print("- Use a max. of 20 characters, and underscores to replace spaces")
+    print("- Use a max. of 10 characters, and underscores to replace spaces")
     print("- For example: ana_banana")
 
     while True:
         player_battle_name = input(yellow + "Enter battle name:\n" + res)
         player.player_battle_name = player_battle_name
-        os.system('cls' if os.name == 'nt' else 'clear')
         print(hash_line)
 
         if validate_battle_name(player_battle_name):
+            os.system('cls' if os.name == 'nt' else 'clear')
             print(blue + welcome_message + player_battle_name)
             print(f"You will be battling {player.enemys_battle_name}" + res)
             print(hash_line)
@@ -50,9 +50,9 @@ def validate_battle_name(player_battle_name):
     and/or has a space character.
     """
     try:
-        if len(player_battle_name) > 20:
+        if len(player_battle_name) > 10:
             raise ValueError(
-                "Battle names can have a maximum of 20 characters."
+                "Battle names can have a maximum of 10 characters."
             )
         elif ' ' in player_battle_name:
             raise ValueError(
