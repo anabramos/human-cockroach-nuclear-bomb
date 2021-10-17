@@ -260,7 +260,7 @@ def main():
     play_again()
 
 
-# color schemes (from colored https://pypi.org/project/colored/)
+# color schemes from colored library (https://pypi.org/project/colored/)
 yellow = fg('#FFEB00')
 blue = fg('#7591FF')
 red = fg('#FF0000')
